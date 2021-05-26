@@ -1,5 +1,3 @@
-
-
 class Sugerencia {
     Prenda prendaDeSugerencia;
     Boolean aceptado;
@@ -16,18 +14,34 @@ class Sugerencia {
     void rechazar() {
         aceptado = false;
     }
+
+    void revertirEfecto() {
+        aceptado = !aceptado;
+    }
 }
 
 class Agregar extends Sugerencia {
+
     void aceptar() {
         destinatario.agregarPrenda(prendaDeSugerencia);
         super.aceptar();
     }
+
+    void revertirEfecto() {
+        destinatario.quitarPrenda(prendaDeSugerencia);
+        super.revertirEfecto();
+    }
 }
 
 class Remover extends Sugerencia {
+
     void aceptar() {
         destinatario.quitarPrenda(prendaDeSugerencia);
         super.aceptar();
+    }
+
+    void revertirEfecto() {
+        destinatario.agregarPrenda(prendaDeSugerencia);
+        super.revertirEfecto();
     }
 }

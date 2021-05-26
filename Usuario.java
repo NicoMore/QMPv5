@@ -63,6 +63,13 @@ class Usuario {
         unaSugerencia.rechazar();
     }
 
+    void revertirSugerencia(Sugerencia unaSugerencia) {
+        if (sugerenciasAceptadas.contains(unaSugerencia)) {
+            unaSugerencia.revertirEfecto();
+            sugerenciasAceptadas.remove(unaSugerencia);
+        }
+    }
+
     Atuendo recibirSugerenciaAtuendoPorTemperatura(Temperatura unaTemperatura) {
         List<Accesorio> accesorio = new ArrayList<>();
         accesorio.add(QueMePongo.filtrarPorTemperatura(QueMePongo.getAccesorios(), unaTemperatura).get(QueMePongo.numeroRandomSegunLista(QueMePongo.getAccesorios().size())));
