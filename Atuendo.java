@@ -20,6 +20,7 @@ class Uniforme extends Atuendo {
 
     Uniforme(PrendaSuperior prendaSuperior, PrendaInferior prendaInferior, Calzado calzado) {
         super(prendaSuperior, prendaInferior, calzado, Collections.emptyList());
+        QueMePongo.agregarUniforme(this);
     }
 
     static Uniforme fabricarUniforme(Sastre sastre) {

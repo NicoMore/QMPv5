@@ -56,3 +56,20 @@ Decisiones en cuarta iteracion:
     -Prenda mutable si atributos nulos, para soportar manejo de borradores (1 por vez), manteniendo inmutabilidad.
     -Todos los metodos de Prenda pasados al builder para mayor coherencia.
     -Creacion de una PrendaFallada, para soluciones polimorficas de fallos.
+
+# Quinta Iteracion
+Requerimientos quinta iteracion:
+    -Compartir guardarropas con otras personas. ✓
+    -Crear distintos guardarropas. ✓
+    -Compartir guardarropas entre usuarios. ✓
+    -Poder recibir sugerencia de prendas. ✓
+    -Poder recibir sugerencia de quitar prendas. ✓
+    -Poder ver las sugerencias y aceptarlas o rechazarlas. ✓
+    -Poder deshacer aceptacion de sugerencia. ✓
+
+Pasos para integrar la cuarta iteracion en la quinta:
+    -Crear clase Guardarropas. ✓
+    -Crear clase usuario. ✓
+
+Decisiones en quinta iteracion:
+    -Sugerencia funciona asincronicamente en usuario.
